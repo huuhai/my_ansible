@@ -1,0 +1,12 @@
+vcenter_hostname: "vcenter.local"
+vcenter_datacenter: "vmware-datacenter"
+validate_certs: false
+vcenter_username: "admin@vsphere.local"
+vcenter_password: "123456"
+vm_name: "myVM"
+vcenter_destination_folder:"myVM"
+vm_template:"temp"
+vm_state: "poweroff"
+
+
+ansible-playbook -i inventory create.yml

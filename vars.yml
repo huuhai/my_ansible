@@ -1,0 +1,19 @@
+vcenter_hostname: "vcenter.local"
+vcenter_datacenter: "vmware-datacenter"
+validate_certs: false
+vcenter_username: "admin@vsphere.local"
+vcenter_password: "123456"
+vm_name: "myVM"
+vm_guestid:"oracle linux"
+vm_disk_gb: 10
+vm_disk_type: "thin"
+vm_disk_datastore:"name_datastore"
+vm_hw_ram_mb:1024
+vm_hw_cpu_n:1
+vm_hw_scsi:"paravirtual"
+vm_net_name:"vm network"
+vm_net_type: "vmxnet3"
+vcenter_destination_folder:"myVM"
+vm_state: "poweroff"
+
+ansible-playbook -i inventory create.yml

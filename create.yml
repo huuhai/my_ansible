@@ -1,0 +1,51 @@
+- name: create VM
+  host: localhost
+  become: false
+  gather_facts:false
+  collections:
+   - community.vmware
+  pretask:
+  - include_vars: vars.yml
+  
+  task:
+  - name: create folder
+    community.vmware.vcenter.folder:
+    hostname: "{{vcenter_hostname}}"
+    username: "{{vcenter_username}}"
+    password: "{{vcenter_password}}"
+    validate_certs: "{{validate_certs}}"
+    datacenter_name: "{{vcenter_datacenter}}"
+    folder_name: "{{vcenter_destination_folder}}"
+    folder_type: vm
+    state: present
+    
+    - name: create VM
+    community.vmware.vcenter.guest:
+    hostname: "{{vcenter_hostname}}"
+    username: "{{vcenter_username}}"
+    password: "{{vcenter_password}}"
+    validate_certs: "{{validate_certs}}"
+    datacenter_name: "{{datacenter_name}}"
+    name: "{{vm_name}}"
+    folder:"{{vcenter_destination_folder}}"
+    state:"{{vm_state}}"
+    guest_id: "{{vm_guestid}}"
+    cluster: "{{vcenter_cluster}}"
+    disk:
+     - size_gb:"{{size_gb}}"
+       type: "{{vm_disk_type}}"
+       datastore: "{{datastore}}"
+    hardware:
+     memory_mb:"{{vm_hw_ram}}"
+     num_cpus: "{{vm_hw_cpu_n}}"
+     scsi:"{{vm_hw_scsi}}"
+    network:
+     - name: "{{vm_net_name}}"
+       device_name: "{{vm_net_type}}"
+       
+     
+     
+     
+     
+     
+    
