@@ -9,4 +9,10 @@ vm_template:"temp"
 vm_state: "poweroff"
 
 
+ansible-galaxy install -r collection/requirements.yml
+ansible-galaxy collection list
+ansible-playbook collection/collection.yml
+lsmod | grep ....
+
+
 ansible-playbook -i inventory create.yml
