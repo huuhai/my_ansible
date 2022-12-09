@@ -8,3 +8,9 @@ python3 -m ensurepip --default-pip
 
 download pip-22.3.1.tar.gz
 python3.8 setup.py install
+
+
+https://docs.oracle.com/en/database/oracle/audit-vault-database-firewall/20/sigig/install.html#GUID-A295ABF9-E2D5-4E52-BB4E-A7B68119B065
+https://edelivery.oracle.com/osdc/faces/Home.jspx;jsessionid=n_UtDacpLqVAeoPd46Z2qGu1w1IcAJ95XYfs-2_-Wvvmh8gdlDM5!-1998835349
+https://edelivery.oracle.com/osdc/faces/SoftwareDelivery
+
