@@ -1,0 +1,7 @@
+[root@testdb /]# ansible-galaxy install -r requirements.yml
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Downloading https://galaxy.ansible.com/download/community-vmware-3.2.0.tar.gz to /root/.ansible/tmp/ansible-local-7449ixqe05k2/tmp7m3vyl9s/community-vmware-3.2.0-b45zegvt
+Installing 'community.vmware:3.2.0' to '/root/.ansible/collections/ansible_collections/community/vmware'
+community.vmware:3.2.0 was installed successfully
